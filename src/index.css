@@ -185,5 +185,11 @@ h3 {
 /* =================== Repos ===================== */
 
 .repos {
-  margin: 3rem 8rem !important;
+  margin: 3rem 3rem !important;
+}
+
+.account__title {
+  font-weight: var(--font-bold) !important;
+  font-size: var(--biggest-font-size) !important;
+  color: var(--second-color) !important;
 }
