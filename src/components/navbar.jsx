@@ -22,6 +22,7 @@ const Navbar = () => {
               setHover(false);
             }}
             onClick={() => {
+              localStorage.clear();
               navigate("/");
             }}
             style={{

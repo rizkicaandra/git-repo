@@ -5,12 +5,35 @@ import Repo from "pages/repo";
 
 function App() {
   const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [total, setTotal] = useState(10);
 
   return (
     <Router>
       <Routes>
-        <Route path="/repos" element={<Repo repos={repos} />} />
-        <Route path="/" element={<Home setRepos={setRepos} />} />
+        <Route
+          path="/repos"
+          element={
+            <Repo
+              repos={repos}
+              setRepos={setRepos}
+              loading={loading}
+              setLoading={setLoading}
+              total={total}
+              setTotal={setTotal}
+            />
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Home
+              setRepos={setRepos}
+              setLoading={setLoading}
+              setTotal={setTotal}
+            />
+          }
+        />
       </Routes>
     </Router>
   );

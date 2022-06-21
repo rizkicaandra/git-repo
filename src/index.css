@@ -98,7 +98,7 @@ h3 {
   justify-content: center;
   flex-direction: column;
   gap: 3rem;
-  height: 60vh;
+  height: 75vh;
 }
 
 .home__title {
@@ -149,6 +149,14 @@ h3 {
   color: var(--fourth-color) !important;
 }
 
+.home__description {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #73777b;
+  font-weight: 400;
+}
+
 /* ==================== NAVBAR ====================== */
 
 .navbar {
@@ -192,4 +200,43 @@ h3 {
   font-weight: var(--font-bold) !important;
   font-size: var(--biggest-font-size) !important;
   color: var(--second-color) !important;
+}
+
+.repo__items {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+.repo__items-data {
+  min-height: 27rem !important;
+}
+
+.repo__items-description {
+  border-radius: 0.5rem !important;
+  background-color: var(--second-color) !important;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem !important;
+}
+
+.ant-descriptions-title {
+  color: var(--thrid-color) !important;
+}
+
+.ant-descriptions-item-label,
+.ant-descriptions-item-content {
+  color: var(--fourth-color) !important;
+}
+
+@media screen and (max-width: 700px) {
+  .repos {
+    margin: 3rem 0.5rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-items: center !important;
+  }
+  .ant-col-12 {
+    max-width: 90% !important;
+  }
 }
