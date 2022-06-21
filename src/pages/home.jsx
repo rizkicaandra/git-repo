@@ -1,7 +1,10 @@
 import { Button, Form, Input, message } from "antd";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ setRepos }) => {
+  const navigate = useNavigate();
+
   const onFinish = async (values) => {
     try {
       if (!values?.username) {
@@ -14,6 +17,10 @@ const Home = () => {
 
         if (!data.length) {
           message.warning("Data not found");
+        } else {
+          message.success("We found your account");
+          setRepos(data);
+          navigate("/repos");
         }
       }
     } catch (error) {

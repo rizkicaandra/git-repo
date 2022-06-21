@@ -12,6 +12,7 @@
   --fourth-color: #f0f0f0;
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
+  --second-font: "Kdam Thmor Pro", sans-serif;
   --biggest-font-size: 2rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.125rem;
@@ -101,7 +102,7 @@ h3 {
 }
 
 .home__title {
-  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: var(--second-font);
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
   color: var(--first-color);
@@ -146,4 +147,43 @@ h3 {
   cursor: pointer;
   background-color: var(--second-color) !important;
   color: var(--fourth-color) !important;
+}
+
+/* ==================== NAVBAR ====================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--second-color);
+  padding: 0.2rem 0.5rem 0 0;
+}
+
+.navbar__title {
+  width: 90%;
+  text-align: center;
+}
+
+.navbar__title-item {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-family: var(--second-font);
+  margin-bottom: 0 !important;
+  color: var(--fourth-color);
+}
+
+.navbar__logout {
+  text-align: center;
+}
+
+.navbar__title-item:hover {
+  cursor: context-menu;
+  color: var(--first-color);
+}
+
+/* =================== Repos ===================== */
+
+.repos {
+  margin: 3rem 8rem !important;
 }
