@@ -1,124 +1,149 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
+/* IMPORT FONT */
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* ========== VARIABLES CSS =========== */
+:root {
+  --header-height: 3rem;
+  /*========== Colors ==========*/
+  --first-color: #21325e;
+  --second-color: #3e497a;
+  --thrid-color: #f1d00a;
+  --fourth-color: #f0f0f0;
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========== Margenes ==========*/
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  margin: 0;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+
+html {
+  scroll-behavior: smooth;
 }
-body {
-  line-height: 1;
-}
-ol,
+
 ul {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+
+a {
+  text-decoration: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--fourth-color);
+  color: var(--second-color);
+  transition: 0.5s;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-semi-bold);
+  line-height: 1.5;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+/* ============== HOME ================*/
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  height: 60vh;
+}
+
+.home__title {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  color: var(--first-color);
+  padding-left: 0.5rem;
+}
+
+.home__action {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem !important;
+  background-color: var(--first-color);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-form-item {
+  margin-bottom: 0px !important;
+}
+
+.home__input {
+  padding: 0.45rem 1.5rem !important;
+  border-radius: 0.3rem;
+  border-color: none !important;
+}
+
+.home__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem !important;
+  padding: 0.55rem 1.2rem !important;
+  border-radius: 5px !important;
+  gap: 0.5rem;
+  background-color: var(--thrid-color) !important;
+  border-radius: 0.5rem;
+  border-color: var(--second-color) !important;
+  color: var(--second-color) !important;
+}
+
+.home__button:hover {
+  cursor: pointer;
+  background-color: var(--second-color) !important;
+  color: var(--fourth-color) !important;
 }

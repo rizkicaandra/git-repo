@@ -1,9 +1,8 @@
+import Home from "pages/home";
+import React from "react";
+
 function App() {
-  return (
-    <>
-      <h1>GIT REPO</h1>
-    </>
-  );
+  return <Home />;
 }
 
 export default App;
